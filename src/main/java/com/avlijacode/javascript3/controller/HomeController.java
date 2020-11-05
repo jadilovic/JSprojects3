@@ -22,15 +22,15 @@ public class HomeController {
         return modelAndView;
     }
     
-    /*
-    @RequestMapping(value={"/story"}, method = RequestMethod.GET)
-    public ModelAndView index2Page(){
+
+    @RequestMapping(value={"/counter"}, method = RequestMethod.GET)
+    public ModelAndView counterPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("story");
+        modelAndView.setViewName("counter");
         return modelAndView;
     }
     
-    
+    /*
     @RequestMapping(value={"/game"}, method = RequestMethod.GET)
     public ModelAndView index3Page(){
         ModelAndView modelAndView = new ModelAndView();
