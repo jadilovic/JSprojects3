@@ -30,43 +30,44 @@ public class HomeController {
         return modelAndView;
     }
     
+    @RequestMapping(value={"/reviews"}, method = RequestMethod.GET)
+    public ModelAndView reviewsPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("reviews");
+        return modelAndView;
+    }
+    
+    @RequestMapping(value={"/navbar"}, method = RequestMethod.GET)
+    public ModelAndView navbarPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("navbar");
+        return modelAndView;
+    }
+    
+    
+    @RequestMapping(value={"/sidebar"}, method = RequestMethod.GET)
+    public ModelAndView sidebarPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("sidebar");
+        return modelAndView;
+    }
+    
+
+    @RequestMapping(value={"/modal"}, method = RequestMethod.GET)
+    public ModelAndView modalPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("modal");
+        return modelAndView;
+    }
+
+    @RequestMapping(value={"/questions"}, method = RequestMethod.GET)
+    public ModelAndView questionsPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("questions");
+        return modelAndView;
+    }
+    
     /*
-    @RequestMapping(value={"/game"}, method = RequestMethod.GET)
-    public ModelAndView index3Page(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("game");
-        return modelAndView;
-    }
-    
-    @RequestMapping(value={"/functions"}, method = RequestMethod.GET)
-    public ModelAndView functionsPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("functions");
-        return modelAndView;
-    }
-    
-    @RequestMapping(value={"/validation"}, method = RequestMethod.GET)
-    public ModelAndView validPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("validation");
-        return modelAndView;
-    }
-    
-    @RequestMapping(value={"/event"}, method = RequestMethod.GET)
-    public ModelAndView eventPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("event");
-        return modelAndView;
-    }
-    
-    @RequestMapping(value={"/galery"}, method = RequestMethod.GET)
-    public ModelAndView galeryPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("galery");
-        return modelAndView;
-    }
-    
-    
     @RequestMapping(value={"/oojs"}, method = RequestMethod.GET)
     public ModelAndView oojsPage(){
         ModelAndView modelAndView = new ModelAndView();
