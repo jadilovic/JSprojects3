@@ -67,14 +67,15 @@ public class HomeController {
         return modelAndView;
     }
     
-    /*
-    @RequestMapping(value={"/oojs"}, method = RequestMethod.GET)
-    public ModelAndView oojsPage(){
+
+    @RequestMapping(value={"/menu"}, method = RequestMethod.GET)
+    public ModelAndView menuPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("oojs");
+        modelAndView.setViewName("menu");
         return modelAndView;
     }
     
+    /*
     @RequestMapping(value={"/objects"}, method = RequestMethod.GET)
     public ModelAndView objectsPage(){
         ModelAndView modelAndView = new ModelAndView();
