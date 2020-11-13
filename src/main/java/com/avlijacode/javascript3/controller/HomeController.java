@@ -75,14 +75,14 @@ public class HomeController {
         return modelAndView;
     }
     
-    /*
-    @RequestMapping(value={"/objects"}, method = RequestMethod.GET)
+    @RequestMapping(value={"/video"}, method = RequestMethod.GET)
     public ModelAndView objectsPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("objects");
+        modelAndView.setViewName("video");
         return modelAndView;
     }
     
+    /*
     @RequestMapping(value={"/jsontest"}, method = RequestMethod.GET)
     public ModelAndView jsonPage(){
         ModelAndView modelAndView = new ModelAndView();
