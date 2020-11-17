@@ -89,15 +89,15 @@ public class HomeController {
         return modelAndView;
     }
     
-    /*
-    @RequestMapping(value={"/balls"}, method = RequestMethod.GET)
-    public ModelAndView ballsPage(){
+
+    @RequestMapping(value={"/tabs"}, method = RequestMethod.GET)
+    public ModelAndView tabsPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("balls");
+        modelAndView.setViewName("tabs");
         return modelAndView;
     }
     
-    
+    /*
     @RequestMapping(value={"/interval"}, method = RequestMethod.GET)
     public ModelAndView intervalPage(){
         ModelAndView modelAndView = new ModelAndView();
