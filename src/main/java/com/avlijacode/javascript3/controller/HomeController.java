@@ -97,15 +97,15 @@ public class HomeController {
         return modelAndView;
     }
     
-    /*
-    @RequestMapping(value={"/interval"}, method = RequestMethod.GET)
-    public ModelAndView intervalPage(){
+
+    @RequestMapping(value={"/timer"}, method = RequestMethod.GET)
+    public ModelAndView timerPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("interval");
+        modelAndView.setViewName("timer");
         return modelAndView;
     }
     
-    
+    /*
     @RequestMapping(value={"/animation"}, method = RequestMethod.GET)
     public ModelAndView animationPage(){
         ModelAndView modelAndView = new ModelAndView();
