@@ -105,21 +105,23 @@ public class HomeController {
         return modelAndView;
     }
     
+
+    @RequestMapping(value={"/ipsum"}, method = RequestMethod.GET)
+    public ModelAndView ipsumPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("ipsum");
+        return modelAndView;
+    }
+    
+
+    @RequestMapping(value={"/grocery"}, method = RequestMethod.GET)
+    public ModelAndView groceryPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("grocery");
+        return modelAndView;
+    }
+    
     /*
-    @RequestMapping(value={"/animation"}, method = RequestMethod.GET)
-    public ModelAndView animationPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("animation");
-        return modelAndView;
-    }
-    
-    @RequestMapping(value={"/apis"}, method = RequestMethod.GET)
-    public ModelAndView apisPage(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("apis");
-        return modelAndView;
-    }
-    
     @RequestMapping(value={"/ajax"}, method = RequestMethod.GET)
     public ModelAndView ajaxPage(){
         ModelAndView modelAndView = new ModelAndView();
