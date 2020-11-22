@@ -120,15 +120,15 @@ public class HomeController {
         modelAndView.setViewName("grocery");
         return modelAndView;
     }
-    
-    /*
-    @RequestMapping(value={"/ajax"}, method = RequestMethod.GET)
-    public ModelAndView ajaxPage(){
+
+    @RequestMapping(value={"/slider"}, method = RequestMethod.GET)
+    public ModelAndView sliderPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ajax");
+        modelAndView.setViewName("slider");
         return modelAndView;
     }
     
+    /*
     @RequestMapping(value={"/canstore"}, method = RequestMethod.GET)
     public ModelAndView canstorePage(){
         ModelAndView modelAndView = new ModelAndView();
