@@ -128,14 +128,15 @@ public class HomeController {
         return modelAndView;
     }
     
-    /*
-    @RequestMapping(value={"/canstore"}, method = RequestMethod.GET)
-    public ModelAndView canstorePage(){
+
+    @RequestMapping(value={"/menu2"}, method = RequestMethod.GET)
+    public ModelAndView menu2Page(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("canstore");
+        modelAndView.setViewName("menu2");
         return modelAndView;
     }
     
+    /*
     @RequestMapping(value={"/starter"}, method = RequestMethod.GET)
     public ModelAndView starterPage(){
         ModelAndView modelAndView = new ModelAndView();
