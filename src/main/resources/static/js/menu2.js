@@ -2,44 +2,43 @@ const menu = [
   {
     id: 1,
     title: "Ulja / masti / automobilske kemikalije",
-    categories: [
-    		{
-    			id: 1,
-    			title: "Ulja",
-    			categories: [],
-    		},
-    		{
-    			id: 2,
-    			title: "Masti",
-    			categories: [],
-    		},
-    		{
-    			id: 3,
-    			title: "Rashladna tekucina protiv smrzavanja",
-    			categories: [],
-    		},    		
-    			],
+    categories: [{
+        id: 1,
+        title: "Ulja",
+        categories: ["Motorno ulje", "Tehnicka maziva", "Ulje za prijenos"],
+     },
+      {
+        id: 2,
+        title: "Masti",
+        categories: ["Masti za lezajeve", "Masti za podmazivanje centralnog sustava", "Biorazgradiva mast"],
+      },
+      {
+    	id: 3,
+    	title: "Rashladna tekucina protiv smrzavanja",
+    	categories: ["Tekucina za hladjenje", "Uredjaj za hladjenje"],
+      }, 
+    ],
  },
   {
     id: 2,
     title: "Pogon",
     categories: [
-		{
-			id: 1,
-			title: "Elektricno kretanje",
-			categories: [],
-		},
-		{
-			id: 2,
-			title: "Kvacilo",
-			categories: [],
-		},
-		{
-			id: 3,
-			title: "Upravljanje kvacilom",
-			categories: [],
-		},    		
-			],
+    	{
+    	id: 1,
+    	title: "Elektricno kretanje",
+    	categories: ["Elektricno kretanje", "Elementi elektricnog kretanja"],
+    	},
+    	{
+    	id: 2,
+    	title: "Kvacilo",
+    	categories: ["Otpusna piksna kvacila", "Lezaj spojnicke osovine", "Nosiva ploca lamele kvacila"],
+    	},  
+    	{
+    	id: 3,
+    	title: "Upravljanje kvacilom",
+    	categories: ["Sajla kvacila", "Crijeva / cijevi kvacila", "Vilica kvacila"],
+    	}, 
+    ],
   },
 ];
 
@@ -54,7 +53,7 @@ window.addEventListener("DOMContentLoaded", function(){
 //	const categories = menu.map(function(item){
 //		return item.category;
 //	})
-	displayMenuButtons();
+	displayMenuButtons(menu);
 });
 
 // display
@@ -88,20 +87,20 @@ function displayMenuItems(menuItems){
 */
 }
 
-function displayMenuButtons(){
+function displayMenuButtons(menuItems){
 	
-	const categories = menu.reduce(function(values, item){
+	const categories = menuItems.reduce(function(values, item){
 		console.log(item.title);
 		if(!values.includes(item.title)){
 			values.push(item.title);
 			}
 		return values;
 		}, 
-		["all"]
+		["Pocetno"],
 	);
 	
 	const categoryBtns = categories.map(function(category){
-		return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`
+		return `<button class="filter-btn" type="button" data-id='${category}'>${category}</button>`
 	}).join("");
 	console.log(categoryBtns);
 	
@@ -113,18 +112,22 @@ function displayMenuButtons(){
 	// buttons
 	filterBtns.forEach(function(btn){
 		btn.addEventListener("click", function(e){
-		const category = e.currentTarget.dataset.id;
-		const menuCategory = menu.filter(function(menuItem){
-			if(menuItem.category === category){
-				return menuItem;
+		const titleName = e.currentTarget.dataset.id;
+		console.log(titleName);
+		let menuCategories = [];
+		menu.forEach(function(menuObject){
+			console.log(menuObject.title + " and " + menuObject.categories);
+			if(menuObject.title === titleName){
+				menuCategories = menuObject.categories;
 			}
 		});
-		//console.log(menuCategory); 
-		if(category === "all"){
-			displayMenuItems(menu);
+
+		if(titleName === "Pocetno"){
+			displayMenuButtons(menu);
 		} else {
-			displayMenuItems(menuCategory);
-			}
+			displayMenuButtons(menuCategories);
+		}
+
 		});
 	});
 }
